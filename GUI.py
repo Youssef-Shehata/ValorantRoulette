@@ -52,3 +52,35 @@ submit_button.pack(pady=10)
 
 # Run the Tkinter event loop
 window.mainloop()
+
+
+
+
+# const smokers = ["Astra",
+#   "Brimstone",
+#   "Viper",
+#   "Harbor",
+#   "Omen"]
+# const initiators = [
+#   "Breach",
+#   "Kay0",
+#   "Skye",
+#   "Sova",
+#   "Fade"
+# ]
+# const sentinels = [
+#   "Chamber",
+#   "Cypher",
+#   "Killjoy",
+#   "Sage",
+#   "Deadlock"
+# ]
+# const duelists = [
+#   "Jett",
+#   "Neon",
+#   "Phoenix",
+#   "Raze",
+#   "Reyna",
+#   "Yoru",
+#   "Iso"
+# ]
