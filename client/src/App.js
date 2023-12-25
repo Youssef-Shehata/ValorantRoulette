@@ -206,7 +206,7 @@ function App() {
           showAgent &&
           <div className='agent-container'>
             <div className='close' onClick={handleCloseAgents}>x</div>
-            <div className='agent max' >
+            <div className='agentmax' >
 
               <img src={pics[Agent]} className='image'></img>
               {Agent}</div>
