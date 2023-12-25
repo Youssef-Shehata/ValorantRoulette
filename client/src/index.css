@@ -38,6 +38,10 @@ html {
   overflow: hidden;
 }
 
+.header p {
+  resize: none;
+}
+
 .container {
   max-width: 100%;
   margin: auto;
@@ -59,6 +63,7 @@ html {
   flex-wrap: wrap;
   align-content: space-around;
   justify-content: center;
+  resize: none;
 
 }
 
@@ -80,6 +85,8 @@ html {
   cursor: pointer;
   user-select: none;
   margin: 30px;
+  overflow: hidden;
+  resize: none;
 
 }
 
@@ -128,6 +135,8 @@ html {
   max-height: 47vh;
   position: absolute;
   bottom: 16vh;
+  resize: block;
+
 
 }
 
@@ -156,6 +165,8 @@ html {
   max-height: 100px;
   position: absolute;
   bottom: 10vh;
+  resize: none;
+
 }
 
 .agents {
