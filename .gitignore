@@ -1,7 +1,0 @@
-# Build directories
-/build/
-/dist/
-/out/
-
-client/node_modules/
-
