@@ -1,16 +1,15 @@
-# agent_picker
+# ValorantRoulette
+randomize your team based on your map prefrences 
+this app genrates a 5 agent team unordered.
 
-A new Flutter project.
+## **Run**
+clone repo and run python GUI.py in terminal .
 
-## Getting Started
+### **RandomFifth**
+apps default is to return 1 smoker 1 sentinel 1 initiator 1 duelist 
+if RandomFifth is checked last agent will be a random role 
+if its unchecked it will always be a duelist 
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### **MapBased**
+if checked the app will generate a team based on the map provided 
+(ps. u can change the prefered agents for each map in the MapBasedAgents.json file )
