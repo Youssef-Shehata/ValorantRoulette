@@ -1,0 +1,35 @@
+{
+  "smokes": [
+    "Astra",
+    "Brimstone",
+    "Viper",
+    "Harbor",
+    "Omen"
+  ],
+  "initiators": [
+    "Breach",
+    "Kay0",
+    "Skye",
+    "Sova",
+    "Fade"
+  ],
+  "sentinels": [
+    "Chamber",
+    "Cypher",
+    "Killjoy",
+    "Sage",
+    "Deadlock"
+  ],
+  "duelists": [
+    "Jett",
+    "Neon",
+    "Phoenix",
+    "Raze",
+    "Reyna",
+    "Yoru",
+    "Iso"
+  ]
+}
+
+
+
