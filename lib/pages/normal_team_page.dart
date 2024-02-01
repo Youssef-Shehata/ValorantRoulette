@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import '../models/agent.dart';
 import '../service/agent_data.dart';
 
-class RandomPage extends StatefulWidget {
-  static const id = 'random-page';
+class NormalTeamPage extends StatefulWidget {
+  static const String id = "normal-team";
 
   @override
-  State<RandomPage> createState() => _RandomPageState();
+  State<NormalTeamPage> createState() => _NormalTeamPageState();
 }
 
-class _RandomPageState extends State<RandomPage> {
+class _NormalTeamPageState extends State<NormalTeamPage> {
   List<Agent> agents = []; // Declare agents list at the class level
   List<Agent> random = []; // Declare random list at the class level
 
@@ -30,7 +30,34 @@ class _RandomPageState extends State<RandomPage> {
 
   List<Agent> getAgents(List<Agent> agents) {
     agents.shuffle();
-    return agents.sublist(0, 5);
+    bool controller = false;
+    bool initiator = false;
+    bool sentinel = false;
+    bool deul1 = false;
+    bool deul2 = false;
+    List<Agent> choosen = [];
+    agents.forEach((element) {
+      if (element.role == "Initiator" && initiator == false) {
+        choosen.add(element);
+        initiator = true;
+      }
+      if (element.role == "Sentinel" && sentinel == false) {
+        choosen.add(element);
+        sentinel = true;
+      }
+      if (element.role == "Controller" && controller == false) {
+        choosen.add(element);
+        controller = true;
+      }
+      if (element.role == "Duelist" && deul1 == false) {
+        choosen.add(element);
+        deul1 = true;
+      } else if (element.role == "Duelist" && deul2 == false) {
+        choosen.add(element);
+        deul2 = true;
+      }
+    });
+    return choosen;
   }
 
   @override

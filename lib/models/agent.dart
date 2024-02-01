@@ -3,6 +3,7 @@ class Agent {
   String photo;
   String fullPhoto;
   String role;
+  static List<String> roles = [];
 
   Agent({
     required this.name,

@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_glow/flutter_glow.dart';
 import '../components/custom_button.dart';
+import '../models/quotes.dart';
 
 class HomePage extends StatelessWidget {
   static const String id = 'homepage';
 
   @override
   Widget build(BuildContext context) {
+    Quotes quotes = Quotes();
     double height = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
@@ -20,9 +22,11 @@ class HomePage extends StatelessWidget {
           padding: EdgeInsets.symmetric(vertical: height * 0.13, horizontal: 8),
           child: Column(
             children: [
-              const Padding(
-                padding: EdgeInsets.all(12.0),
-                child: Icon(Icons.games_outlined),
+              Padding(
+                padding: const EdgeInsets.all(12.0),
+                child: Text(quotes.returnRandQuote(),
+                    style: const TextStyle(
+                        fontFamily: "CustomFont", color: Colors.white)),
               ),
               Expanded(
                 child: Column(
@@ -30,8 +34,9 @@ class HomePage extends StatelessWidget {
                     Expanded(
                       child: GridView(
                         shrinkWrap: false,
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2, childAspectRatio: 1 / 1.25),
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 2, childAspectRatio: 1 / 1.25),
                         children: [
                           CustomButton(
                               text: "Random Agent",
@@ -42,6 +47,11 @@ class HomePage extends StatelessWidget {
                               text: "Random Team",
                               function: () {
                                 Navigator.of(context).pushNamed('random-page');
+                              }),
+                          CustomButton(
+                              text: "Normal Team",
+                              function: () {
+                                Navigator.of(context).pushNamed("normal-team");
                               }),
                         ],
                       ),

@@ -1,1 +1,1 @@
-double KBorderRadiusButton = 2;
+double KBorderRadiusButton = 15;

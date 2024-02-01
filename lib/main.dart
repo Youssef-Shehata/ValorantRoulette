@@ -1,4 +1,5 @@
 import 'package:agent_picker/pages/homepage.dart';
+import 'package:agent_picker/pages/normal_team_page.dart';
 import 'package:agent_picker/pages/one_agent.dart';
 
 import 'package:agent_picker/pages/random_page.dart';
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
       routes: {
         HomePage.id: (context) => HomePage(),
         RandomPage.id: (context) => RandomPage(),
-        OneAgent.id: (context) => OneAgent()
+        OneAgent.id: (context) => OneAgent(),
+        NormalTeamPage.id: (context) => NormalTeamPage()
       },
     );
   }
