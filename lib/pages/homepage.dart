@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
         child: Center(
             child: Padding(
           padding: EdgeInsets.symmetric(vertical: height * 0.13, horizontal: 8),
-          child: Column(
+          child: ListView(
             children: [
               Padding(
                 padding: const EdgeInsets.all(12.0),
@@ -28,36 +28,27 @@ class HomePage extends StatelessWidget {
                     style: const TextStyle(
                         fontFamily: "CustomFont", color: Colors.white)),
               ),
-              Expanded(
-                child: Column(
-                  children: [
-                    Expanded(
-                      child: GridView(
-                        shrinkWrap: false,
-                        gridDelegate:
-                            const SliverGridDelegateWithFixedCrossAxisCount(
-                                crossAxisCount: 2, childAspectRatio: 1 / 1.25),
-                        children: [
-                          CustomButton(
-                              text: "Random Agent",
-                              function: () {
-                                Navigator.of(context).pushNamed('one-agent');
-                              }),
-                          CustomButton(
-                              text: "Random Team",
-                              function: () {
-                                Navigator.of(context).pushNamed('random-page');
-                              }),
-                          CustomButton(
-                              text: "Normal Team",
-                              function: () {
-                                Navigator.of(context).pushNamed("normal-team");
-                              }),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
+              GridView(
+                shrinkWrap: true,
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2, childAspectRatio: 1 / 1.25),
+                children: [
+                  CustomButton(
+                      text: "Random Agent",
+                      function: () {
+                        Navigator.of(context).pushNamed('one-agent');
+                      }),
+                  CustomButton(
+                      text: "Random Team",
+                      function: () {
+                        Navigator.of(context).pushNamed('random-page');
+                      }),
+                  CustomButton(
+                      text: "Normal Team",
+                      function: () {
+                        Navigator.of(context).pushNamed("normal-team");
+                      }),
+                ],
               ),
             ],
           ),
